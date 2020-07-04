@@ -7,7 +7,8 @@ spec:
   containers:
   - name: time-check
     image: busybox
-    command: ["while true; do date; sleep $(TIME_FREQ);done"]
+    command: ["/bin/sh"]
+    args: ["-c", "while true; do date; sleep $(TIME_FREQ);done"]
     volumeMounts:
     - name: log-storage
       mountPath: /opt/time
@@ -20,12 +21,3 @@ spec:
   volumes:
     - name: log-storage
       emptyDir: {}
-
-
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: time-config
-  namespace: dvl1987
-data:
-  TIME_FREQ: '10'

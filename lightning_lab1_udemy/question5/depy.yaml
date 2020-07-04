@@ -21,12 +21,14 @@ spec:
         - containerPort: 6379
         resources:
           requests:
-            cpu: 500m
+            cpu: 200m
         volumeMounts:
           - name: data
             mountPath: /redis-master-data
           - name: redis-config
             mountPath: /redis-master
+      nodeSelector:
+        kubernetes.io/hostname: master
       volumes:
         - name: data
           emptyDir : {}

@@ -8,7 +8,14 @@ spec:
   - name: time-check
     image: busybox
     command: ["/bin/sh"]
-    args: ["-c", "while true; do date; sleep $(TIME_FREQ);done"]
+    args: 
+    - -c
+    - >
+      while true; 
+       do 
+        echo "$(date)" >> /opt/time/time-check.log;
+        sleep $(TIME_FREQ);
+      done
     volumeMounts:
     - name: log-storage
       mountPath: /opt/time

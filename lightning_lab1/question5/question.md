@@ -1,4 +1,4 @@
-question.md
+
 ```
 Create a redis deployment with the following parameters:
 Name of the deployment should be redis using the redis:alpine image. It should have exactly 1 replica.

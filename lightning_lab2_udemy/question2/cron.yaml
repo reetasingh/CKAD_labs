@@ -7,6 +7,7 @@ spec:
   jobTemplate:
     spec:
       backoffLimit: 25
+      # if failed for more than 20 seconds , fail the job
       activeDeadlineSeconds: 20
       template:
         metadata:

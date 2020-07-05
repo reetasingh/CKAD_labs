@@ -21,6 +21,7 @@ spec:
       mountPath: /opt/time
     env:
       - name: TIME_FREQ
+        # refer env from config map
         valueFrom:
           configMapKeyRef:
             name: time-config

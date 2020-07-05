@@ -11,5 +11,6 @@ spec:
       mountPath: /var/www/nginx
   volumes:
     - name: log-storage
+      # use persistent volume claim
       persistentVolumeClaim:
         claimName: log-claim

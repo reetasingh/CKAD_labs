@@ -1,3 +1,3 @@
 # CKAD_labs
 
-Practice labs for CKAD Exam (Certified Kubernetes Associate Developer )
+Practice labs for CKAD Exam (Certified Kubernetes Associate Developer ) Preparation

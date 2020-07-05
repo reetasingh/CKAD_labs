@@ -9,7 +9,7 @@ spec:
   containers:
   - name: secret
     image: busybox
-    command: ["/bin/bash", "-c", "sleep", "3600"]
+    command: ["sleep", "3600"]
     volumeMounts:
     - name: secret-volume
       mountPath: /etc/secret-volume
@@ -18,3 +18,11 @@ spec:
   - name: secret-volume
     secret:
       secretName: dotfile-secret
+  # add toleration since master node has a taint
+  # master node had taint node-role.kubernetes.io/master
+  tolerations:
+  - key: node-role.kubernetes.io/master
+    operator: "Exists"
+    effect: "NoSchedule"
+
+

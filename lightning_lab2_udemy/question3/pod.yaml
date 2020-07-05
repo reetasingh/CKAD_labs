@@ -1,0 +1,20 @@
+# first create namespace dev2406
+# before creating pod
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-busybox
+  namespace: dev2406
+spec:
+  containers:
+  - name: secret
+    image: busybox
+    command: ["/bin/bash", "-c", "sleep", "3600"]
+    volumeMounts:
+    - name: secret-volume
+      mountPath: /etc/secret-volume
+  volumes:
+    # mount volume from secret dotfile-secret
+  - name: secret-volume
+    secret:
+      secretName: dotfile-secret

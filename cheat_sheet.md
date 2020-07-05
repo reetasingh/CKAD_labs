@@ -1,5 +1,3 @@
-cheat_sheet.md
-
 
 get pod in all namespaces
 ```

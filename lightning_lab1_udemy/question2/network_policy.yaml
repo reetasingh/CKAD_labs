@@ -13,4 +13,8 @@ spec:
     - podSelector:
         matchLabels:
           name: webapp-color
+    ports:
+    - protocol: TCP
+      port: 80
+
 

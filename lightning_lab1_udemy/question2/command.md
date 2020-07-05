@@ -22,4 +22,11 @@ Spec:
 master $
 ```
 
-we have to add network policy to allow traffic
+we have to add network policy to allow traffic on 80/TCP
+
+```
+master $ kubectl get svc
+NAME             TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)   AGE
+kubernetes       ClusterIP   10.96.0.1       <none>        443/TCP   26m
+secure-service   ClusterIP   10.107.135.96   <none>        80/TCP    17m
+```

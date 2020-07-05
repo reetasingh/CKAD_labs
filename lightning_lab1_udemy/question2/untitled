@@ -1,0 +1,7 @@
+
+check what is the network policy
+```
+master $ kubectl get netpol
+NAME           POD-SELECTOR   AGE
+default-deny   <none>         114s
+```

@@ -27,8 +27,10 @@ spec:
             mountPath: /redis-master-data
           - name: redis-config
             mountPath: /redis-master
-      nodeSelector:
-        kubernetes.io/hostname: master
+      tolerations:
+      - key: node-role.kubernetes.io/master
+        operator: "Exists"
+        effect: "NoSchedule"
       volumes:
         - name: data
           emptyDir : {}

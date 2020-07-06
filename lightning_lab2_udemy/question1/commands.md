@@ -7,7 +7,7 @@ kubectl get pod nginx1401 -n dev1401
 # part1
 ```
 readines probe
-
+since container port is 9080
 
 change http port to 9080
 

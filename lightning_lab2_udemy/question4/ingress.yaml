@@ -10,12 +10,12 @@ spec:
       - path: /video
         backend:
           serviceName: video-service
-          servicePort: 80
+          servicePort: 8080
   - host: apparels.ecom-store.com
     http:
       paths:
       - path: /wear
         backend:
           serviceName: apparels-service
-          servicePort: 80
+          servicePort: 8080
 

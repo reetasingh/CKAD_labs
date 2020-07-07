@@ -1,0 +1,5 @@
+
+
+```
+Create a new Deployment named httpd-frontend with 3 replicas using image httpd:2.4-alpine
+```

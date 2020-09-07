@@ -8,3 +8,14 @@ alias kd="k describe"
 alias kr="k run"
 
 export do="--dry-run=client -o yaml"
+
+
+Example:
+
+```
+kg po nginx
+```
+
+```
+master $ kr nginx --image=nginx --restart=Never $do > pod.yaml
+```
